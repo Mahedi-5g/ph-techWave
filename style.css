@@ -1,6 +1,57 @@
 @import "tailwindcss";
 
 
-/* footer{
-    background-image: url('./assets/footer-bg.png');
-} */
+@keyframes fadeUpLoop {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  15% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  70% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+.animate-fadeup-loop {
+  animation: fadeUpLoop 4s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+@keyframes slideLoop {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+
+  15% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  70% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(0px);
+  }
+}
+
+.animate-slide-loop {
+  animation: slideLoop 4s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
